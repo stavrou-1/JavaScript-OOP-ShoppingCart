@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript ShoppingCart Application</title>
+</head>
+  <body>
+    <!-- store section -->
+    <div class="store-section">
+      <h1>Your Store:</h1>
+      <form class="form" action="" onsubmit="return false;">
+       <div class="form-group">
+          <input type="text" id="inputItem" class="inputItem" placeholder="name"/>
+        </div>
+        <div class="form-group">
+          <input type="text" id="inputPrice" class="inputPrice" placeholder="price"/>
+        </div>
+        <div class="form-group">
+          <button class="addItem">Add Item</button>
+        </div>
+      </form>
+      <!--   clearCartCache -->
+      <button class="clearCache">Clear Messages</button>
+      </div>
+      <small class="logger"></small>
+      <ul class="inventory"></ul>
+    </div>
+
+    <!-- shopping cart -->
+    <div class="shopping-cart">
+      <h1>My Shopping Cart</h1>
+      <br/>
+      <h4>Total: $<span id='cartTotal'>0.00</span></h4>
+      <button class="clearCart">Clear my Cart</button>
+      <h2>Items added:</h2>
+      <ul class="shoppingCartList"></ul>
+    </div>
+    <script src="./jquery-3.4.1.js"></script><!-- Jquery 3.4.1 -->
+    <script src="./app.js"></script><!-- App custom js -->
+  </body>
+</html>
