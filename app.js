@@ -134,7 +134,7 @@ $(function() {
    app.addPriceToCart(itemPrice);
    $('#cartTotal').html(app.getTotal());
    $('.shoppingCartList').append(`
-    <div id=${itemAdded.id}>
+    <div id=${itemAdded.id} class="myCart">
       <li>${itemAdded.name}, $${itemAdded.price}</li>
       <button class="removeItem" data-price=${itemAdded.price} data-id=${itemAdded.id}>x</button>
     </div>`);
@@ -146,8 +146,7 @@ $(function() {
     // here we need to check if we are removing items from out shopping cart or inventory.
     // remove items from inventory will not decrement our cart total.
     // We'll just check for a class for now.
-    const parentClass = $(this).parent('div.inventoryPanels');
-    if (!parentClass) {
+    if ($(this).parent('div.myCart').length) {
       app.removeFromCart(item, price);
     }
     $(this).parent('div').remove();
