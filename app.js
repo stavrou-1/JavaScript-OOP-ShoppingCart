@@ -105,8 +105,8 @@ $(function() {
   const app = new App.Checkout(mockCartData);
   
   var init = function() {
-    app.add({name: 'Poop',price: '20.99'});
-    app.add({name: 'Salsa',price: '22.99'});
+    app.add({name: 'MLB MN Twins T-shirt',price: '20.99'});
+    app.add({name: 'Gold dust sprinkled habanero salsa',price: '22.99'});
     buildList(app);
   }
 
